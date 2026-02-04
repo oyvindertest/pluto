@@ -19,5 +19,13 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Build with Maven
-      run: mvn --batch-mode clean install
+    - name: Get Next Version
+      id: semver
+      uses: ietf-tools/semver-action@v1
+      with:
+        token: ${{ github.token }}
+        branch: main
+
+    - name: Print version
+      id: print-version
+      run: echo ${{ steps.semver.outputs.next }}
