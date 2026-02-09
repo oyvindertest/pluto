@@ -21,6 +21,7 @@ jobs:
 
     - name: Get Next Version
       id: semver
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       uses: ietf-tools/semver-action@v1
       with:
         token: ${{ github.token }}
@@ -28,4 +29,5 @@ jobs:
 
     - name: Print version
       id: print-version
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
       run: echo ${{ steps.semver.outputs.next }}
