@@ -20,9 +20,9 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
-    implementation("com.typesafe.akka:akka-stream_3:2.8.6")
-    implementation("com.typesafe.akka:akka-actor_3:2.8.6")
-    implementation("org.apache.httpcomponents:httpclient:4.3.5")
+    implementation("com.typesafe.akka:akka-stream_3:2.8.8")
+    implementation("com.typesafe.akka:akka-actor_3:2.8.8")
+    implementation("org.apache.httpcomponents:httpclient:4.5.14")
     implementation("com.squareup.okhttp3:logging-interceptor:4.7.1)
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
