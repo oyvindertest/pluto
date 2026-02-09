@@ -5,12 +5,27 @@ updates:
     schedule:
       interval: daily
     groups:
-      minor-and-patch-updates:
+      maven-minor-and-patch-updates:
         update-types:
           - minor
           - patch
-      major-updates:
+      maven-major-updates:
         update-types:
           - major
     commit-message:
       prefix: "Maven Update"
+
+  - package-ecosystem: gradle
+    directory: /
+    schedule:
+      interval: daily
+    groups:
+      gradle-minor-and-patch-updates:
+        update-types:
+          - minor
+          - patch
+      gradle-major-updates:
+        update-types:
+          - major
+    commit-message:
+      prefix: "Gradle Update"
