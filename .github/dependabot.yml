@@ -1,17 +1,17 @@
 version: 2
 updates:
-  - package-ecosystem: "maven"
-    directory: "/"
+  - package-ecosystem: maven
+    directory: /
     schedule:
-      interval: "weekly"
-      day: "sunday"
+      interval: weekly
+      day: sunday
     groups:
       minor-and-patch-updates:
         applies-to: version-updates
         match:
           update-types:
-            - "minor"
-            - "patch"
+            - minor
+            - patch
         commit-message:
           prefix: "[Dependabot Minor/Patch]"
 
@@ -20,6 +20,6 @@ updates:
         applies-to: version-updates
         match:
           update-types:
-            - "major"
+            - major
         commit-message:
           prefix: "[Dependabot Major]"
