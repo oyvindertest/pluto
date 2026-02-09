@@ -9,5 +9,8 @@ updates:
         update-types:
           - minor
           - patch
+      major-updates:
+        update-types:
+          - major
     commit-message:
       prefix: "Maven Update"
