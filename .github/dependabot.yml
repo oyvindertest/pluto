@@ -1,31 +1,28 @@
 version: 2
 updates:
-  - package-ecosystem: maven
-    directory: /
-    schedule:
-      interval: daily
-    groups:
-      maven-minor-and-patch-updates:
-        update-types:
-          - minor
-          - patch
-      maven-major-updates:
-        update-types:
-          - major
-    commit-message:
-      prefix: "Maven Update"
-
   - package-ecosystem: gradle
     directory: /
     schedule:
-      interval: daily
+      interval: weekly
+      day: monday
     groups:
-      gradle-minor-and-patch-updates:
+      gradle-minor-and-patch:
         update-types:
           - minor
           - patch
-      gradle-major-updates:
+      gradle-major:
         update-types:
           - major
-    commit-message:
-      prefix: "Gradle Update"
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      github-actions-minor-and-patch:
+        update-types:
+          - minor
+          - patch
+      github-actions-major:
+        update-types:
+          - major
