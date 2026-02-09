@@ -24,6 +24,7 @@ dependencies {
     implementation("com.typesafe.akka:akka-actor_3:2.8.6")
     implementation("org.apache.httpcomponents:httpclient:4.3.5")
     implementation("com.squareup.okhttp3:logging-interceptor:4.7.1)
+    implementation("org.codehaus.plexus:plexus-utils:2.0.7")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
