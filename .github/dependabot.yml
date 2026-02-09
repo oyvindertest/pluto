@@ -9,17 +9,10 @@ updates:
       minor-and-patch-updates:
         applies-to: version-updates
         match:
-          update-types:
-            - minor
-            - patch
+          patterns:
+            - "*"
+        update-types:
+          - minor
+          - patch
         commit-message:
           prefix: "[Dependabot Minor/Patch]"
-
-      # Group for major updates
-      major-updates:
-        applies-to: version-updates
-        match:
-          update-types:
-            - major
-        commit-message:
-          prefix: "[Dependabot Major]"
