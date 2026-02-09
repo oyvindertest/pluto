@@ -7,8 +7,6 @@ updates:
       day: sunday
     groups:
       minor-and-patch-updates:
-        patterns:
-          - "*"
         update-types:
           - minor
           - patch
