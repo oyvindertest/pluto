@@ -1,6 +1,6 @@
 plugins {
     java
-    id("org.springframework.boot") version "4.0.2"
+    id("org.springframework.boot") version "4.0.5"
     id("io.spring.dependency-management") version "1.1.7"
 }
 
@@ -24,7 +24,7 @@ dependencies {
     implementation("com.typesafe.akka:akka-actor_3:2.8.8")
     implementation("org.apache.httpcomponents:httpclient:4.5.14")
     implementation("com.squareup.okhttp3:logging-interceptor:4.7.1)
-    implementation("org.codehaus.plexus:plexus-utils:4.0.2")
+    implementation("org.codehaus.plexus:plexus-utils:4.0.3")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
