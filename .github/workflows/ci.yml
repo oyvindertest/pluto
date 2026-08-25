@@ -30,6 +30,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v5
 
+      - name: List
+        run: ls -lR target
+
       - name: Build Docker image
         run: docker build -t pluto:ci .
 
